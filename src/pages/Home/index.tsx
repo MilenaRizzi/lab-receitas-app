@@ -6,6 +6,7 @@ import { FilterRecipes } from "./components/FilterRecipes";
 import { FilterRecipeContext } from "../../contexts/FilterRecipeContext";
 import { useContext } from "react";
 import { NewTransationModal } from "./components/NewTransactionModal";
+import newRecipe from "../../assets/add.png"
 
 export function Home() {
   const { filteredRecipes } = useContext(FilterRecipeContext);
@@ -19,7 +20,7 @@ export function Home() {
         <Dialog.Root>
           <Dialog.Trigger asChild>
             <NewRecipeButton type="button" title="Cadastrar">
-              <img src="src\assets\add.png" alt="" />
+              <img src={newRecipe} alt="" />
             </NewRecipeButton>
           </Dialog.Trigger>
           <NewTransationModal />
